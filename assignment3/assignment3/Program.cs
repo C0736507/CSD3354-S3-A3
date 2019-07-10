@@ -23,7 +23,7 @@ namespace assignment3
         public void Run()
         {
             // Open the names file and access the data
-            using (StreamReader file = new StreamReader("U:/Users/736507/assignment3/assignment3/assignment3/names.txt"))
+            using (StreamReader file = new StreamReader("U:/Users/736507/assignment3/assignment3/assignment3/TextFile1.txt"))
             {
                 int counter = 0;
                 string ln;
