@@ -9,6 +9,7 @@ namespace assignment3
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
             var tp = new TextProcessing();
@@ -18,16 +19,18 @@ namespace assignment3
 
     class TextProcessing
     {
+        Queue<string> names = new Queue<string>();
         public void Run()
         {
             // Open the names file and access the data
-            using (StreamReader file = new StreamReader("U:/Users/736507/assignment3/assignment3/assignment3/TextFile1.txt"))
+            using (StreamReader file = new StreamReader("U:/Users/736507/assignment3/assignment3/assignment3/names.txt"))
             {
                 int counter = 0;
                 string ln;
 
                 while ((ln = file.ReadLine()) != null)
                 {
+                    names.Enqueue(ln);
                     Console.WriteLine(ln);
                     counter++;
                 }
