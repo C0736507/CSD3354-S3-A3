@@ -12,8 +12,10 @@ namespace assignment3
         
         static void Main(string[] args)
         {
-            var tp = new TextProcessing();
-            tp.Run();
+            //var tp = new TextProcessing();
+            //tp.Run();
+             
+            new Blue().SayFavouriteFood(Red.FavouriteFood);
         }
     }
 
@@ -36,7 +38,45 @@ namespace assignment3
                 }
                 file.Close();
                 Console.WriteLine($"File has {counter} lines.");
+                //post condition of while
+                playingWithStacks.Run(names);
             }
+        }
+    }
+    class playingWithStacks
+    {
+        public static void Run(Queue<string> tangerine)
+        {
+            Stack<string> names = new Stack<string>();
+            //how can i access the queue variable "names" in this class
+            //iterate over queue
+            //get each element
+            //push into stack
+            foreach (var item in tangerine)
+            {
+                names.Push(tangerine.Dequeue());
+
+            }
+
+
+
+        }
+    }
+    class Workbench
+    {
+
+    }
+
+    class Red
+    {
+        public static String FavouriteFood = "carrot";
+    }
+
+    class Blue
+    {
+        public void SayFavouriteFood(String FavouriteFood)
+        {
+            Console.WriteLine(Red.FavouriteFood);
         }
     }
 
